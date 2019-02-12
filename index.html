@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pro-d3-api-demo</title>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="Webpack basic starter project">
+    <meta name="Description" content="A simple webpack starter project for your basic web development needs."/>
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Webpack basic starter project" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://lifenautjoe.github.io/webpack-starter-basic/" />
+    <meta property="og:image" content="https://i.snag.gy/i3eMBc.jpg" />
+    <meta property="og:description" content="A simple webpack starter project for your basic web development needs." />
+    <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#FECC01">
+    <!-- Mobile header color Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#FECC01">
+    <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <noscript><link rel="stylesheet" href="src/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+            <header id="header" class="alt">
+                <span class="logo"><img src="src/assets/apress-logo.svg" alt="" /></span>
+                <h1>Pro D3.js</h1>
+                <p>D3.js Libraries Demo</p>
+            </header>
+
+        <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#intro" class="active">Introduction</a></li>
+                    <li><a href="#plottable">Plottable</a></li>
+                    <li><a href="#billboard">Billboard</a></li>
+                    <li><a href="#vega">Vega</a></li>
+                    <li><a href="#d3fc">D3FC</a></li>
+                    <li><a href="#britecharts">Britecharts</a></li>
+                </ul>
+            </nav>
+
+        <!-- Main -->
+            <div id="main">
+
+                <!-- Introduction -->
+                    <section id="intro" class="main">
+                        <div class="spotlight">
+                            <div class="content">
+                                <header class="major">
+                                    <h2>Introduction</h2>
+                                </header>
+                                <p>This is a limited set of libraries that represent different API styles. The following projects use one of the latest D3.js versions. They also feature high-quality code, broad test coverage or innovative approaches. They differ in the granularity of their abstractions (high, medium or low level) and the style of their API.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                <!-- Plottable -->
+                    <section id="plottable" class="main special">
+                        <header class="major">
+                            <h2>Plottable</h2>
+                            <p>Plottable is a popular Object-Oriented Programming charting library. Plottable was created and maintained by the team at Palantir technologies. It has been around since 2014.</p>
+                        </header>
+                        <section class="left-aligned">
+                            <div id="plottable-container" style="width: 800px; height: 400px"></div>
+                        </section>
+                        <footer class="major">
+                            <ul class="actions special">
+                                <li><a href="http://plottablejs.org" class="button primary">Documentation</a></li>
+                                <li><a href="http://plottablejs.org/examples/" class="button">Demos</a></li>
+                            </ul>
+                        </footer>
+                    </section>
+
+                <!-- Billboard -->
+                    <section id="billboard" class="main special">
+                        <header class="major">
+                            <h2>Billboard</h2>
+                            <p>Billboard is a fork of the classic <a href="http://c3js.org/">C3.js</a> library updated with D3.js version five. This library pretends to give continuity to the abandoned C3.js project.</p>
+                        </header>
+                        <section class="left-aligned">
+                            <div id="billboard-container" style="width: 800px; height: 400px"></div>
+                        </section>
+                        <footer class="major">
+                            <ul class="actions special">
+                                <li><a href="https://naver.github.io/billboard.js/" class="button primary">Documentation</a></li>
+                                <li><a href="https://naver.github.io/billboard.js/demo/" class="button">Demos</a></li>
+                            </ul>
+                        </footer>
+                    </section>
+
+                <!-- Vega -->
+                    <section id="vega" class="main special">
+                        <header class="major">
+                            <h2>Vega</h2>
+                            <p>Vega transforms the configurations of libraries like Billboard from JavaScript objects into pure JSON files. It implements a visualization grammar inspired by The Grammar of Graphics, the book that was an inspiration for D3.js.</p>
+                        </header>
+                        <section class="left-aligned">
+                            <div id="vega-container" style="width: 800px; height: 400px"></div>
+                        </section>
+                        <footer class="major">
+                            <ul class="actions special">
+                                <li><a href="https://vega.github.io/vega/" class="button primary">Documentation</a></li>
+                                <li><a href="https://vega.github.io/vega/examples/" class="button">Demos</a></li>
+                            </ul>
+                        </footer>
+                    </section>
+
+                <!-- D3FC -->
+                    <section id="d3fc" class="main special">
+                        <header class="major">
+                            <h2>D3FC</h2>
+                            <p>D3FC is a functional, low granularity library. It makes use of D3.js and functions to help us create powerful interactive charts both in SVG and Canvas. </p>
+                        </header>
+                        <section class="left-aligned">
+                            <div id="d3fc-container" style="width: 800px; height: 400px"></div>
+                        </section>
+                        <footer class="major">
+                            <ul class="actions special">
+                                <li><a href="https://d3fc.io/" class="button primary">Documentation</a></li>
+                                <li><a href="https://d3fc.io/examples/" class="button">Demos</a></li>
+                            </ul>
+                        </footer>
+                    </section>
+
+                <!-- Britecharts -->
+                    <section id="britecharts" class="main special">
+                        <header class="major">
+                            <h2>Britecharts</h2>
+                            <p>Britecharts is a reusable Charting Library based on D3.js v5 that offers easy and intuitive use of charts and components that can be composed together to create amazing visualizations.</p>
+                        </header>
+                        <section class="left-aligned">
+                            <div id="britecharts-container" style="width: 800px; height: 400px"></div>
+                        </section>
+                        <footer class="major">
+                            <ul class="actions special">
+                                <li><a href="http://eventbrite.github.io/britecharts/" class="button primary">Documentation</a></li>
+                                <li><a href="http://eventbrite.github.io/britecharts/tutorial-kitchen-sink.html" class="button">Demos</a></li>
+                            </ul>
+                        </footer>
+                    </section>
+            </div>
+
+        <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            </footer>
+
+    </div>
+
+    <!-- Scripts
+    <script src="src/jquery.min.js"></script>
+    <script src="src/jquery.scrollex.min.js"></script>
+    <script src="src/jquery.scrolly.min.js"></script>
+    <script src="src/browser.min.js"></script>
+    <script src="src/breakpoints.min.js"></script>
+    <script src="src/util.js"></script>
+    <script src="src/main.js"></script>
+     -->
+
+    <script src="bundle.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
