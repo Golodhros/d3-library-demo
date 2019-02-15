@@ -7,14 +7,10 @@ import {britechartsBarChart} from './charts/britecharts';
 require('normalize.css/normalize.css');
 require('./sass/main.scss');
 
-window.$ = require('jquery');
-window.jQuery = require('jquery');
-
 require('jquery.scrollex');
 require('../node_modules/jquery.scrolly/jquery.scrolly.js');
 require('browser-js');
 require('breakpoints.js');
-
 require('./util.js');
 require('./main.js');
 

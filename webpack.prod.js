@@ -1,12 +1,20 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin");
 
 const buildPath = path.resolve(__dirname, 'dist');
+
+const alias = {
+  jQuery: path.resolve('./node_modules/jquery'),
+  jquery: path.resolve('./node_modules/jquery'),
+  $: path.resolve('./node_modules/jquery'),
+};
 
 module.exports = {
     devtool: 'source-map',
@@ -72,7 +80,11 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.svg$/,
+                use: "file-loader",
+            },
         ]
     },
     plugins: [
@@ -114,6 +126,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'styles.[contenthash].css'
         }),
+        new GoogleFontsPlugin({
+            fonts: [
+                { family: "Encode Sans", variants: [ "300", "600" ] }
+            ]
+        }),
         new OptimizeCssAssetsPlugin({
             cssProcessor: require('cssnano'),
             cssProcessorOptions: {
@@ -125,6 +142,11 @@ module.exports = {
                 }
             },
             canPrint: true
+        }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
         })
     ]
 };

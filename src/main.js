@@ -6,21 +6,22 @@
 
 const breakpoints = require('breakpoints.js');
 
-(function($) {
+
+// (function($) {
 
 	var	$window = $(window),
 		$body = $('body'),
 		$main = $('#main');
 
 	// Breakpoints.
-		new breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
+		// new breakpoints({
+		// 	xlarge:   [ '1281px',  '1680px' ],
+		// 	large:    [ '981px',   '1280px' ],
+		// 	medium:   [ '737px',   '980px'  ],
+		// 	small:    [ '481px',   '736px'  ],
+		// 	xsmall:   [ '361px',   '480px'  ],
+		// 	xxsmall:  [ null,      '360px'  ]
+		// });
 
 	// Play initial animations on page load.
 		$window.on('load', function() {
@@ -117,9 +118,10 @@ const breakpoints = require('breakpoints.js');
 
 		}
 
+console.log('Scrolly?', $('.scrolly').length)
 	// Scrolly.
 		$('.scrolly').scrolly({
 			speed: 1000
 		});
 
-})(jQuery);
+// })(jQuery);

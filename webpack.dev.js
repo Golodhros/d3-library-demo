@@ -1,6 +1,14 @@
 const path = require('path');
+const webpack = require('webpack');
 
-const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin");
+
+const alias = {
+  jQuery: path.resolve('./node_modules/jquery'),
+  jquery: path.resolve('./node_modules/jquery'),
+  $: path.resolve('./node_modules/jquery'),
+};
 
 module.exports = {
     devtool: 'eval-cheap-module-source-map',
@@ -26,6 +34,34 @@ module.exports = {
                     presets: ['env']
                 }
             },
+            // {
+            //     test: /.js/,
+            //     use: [
+            //       {
+            //         loader: 'expose-loader',
+            //         options: {
+            //             sourceMap: true
+            //         }
+            //       }
+            //     ]
+            // },
+            // {
+            //     test: require.resolve('jquery'),
+            //     use: [
+            //         {
+            //             loader: 'expose-loader',
+            //             options: 'jQuery'
+            //         },
+            //         {
+            //             loader: 'expose-loader',
+            //             options: 'jquery'
+            //         },
+            //         {
+            //             loader: 'expose-loader',
+            //             options: '$'
+            //         }
+            //     ]
+            // },
             {
                 test: /\.(scss|css)$/,
                 use: [
@@ -69,14 +105,28 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.svg$/,
+                use: "file-loader",
+            },
         ],
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html',
+            // Inject the js bundle at the end of the body of the given template
+            inject: 'body',
+        }),
         new GoogleFontsPlugin({
             fonts: [
                 { family: "Encode Sans", variants: [ "300", "600" ] }
             ]
+        }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
         })
     ]
 };
