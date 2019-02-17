@@ -21,7 +21,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: '[name].[hash:20].js',
-        path: buildPath
+        path: buildPath,
+        publicPath: '/',
     },
     node: {
         fs: 'empty'
@@ -57,6 +58,7 @@ module.exports = {
                             sourceMap: true
                         }
                     },
+                    { loader: 'resolve-url-loader' },
                     {
                         // compiles Sass to CSS
                         loader: 'sass-loader',
@@ -96,7 +98,7 @@ module.exports = {
         new CleanWebpackPlugin(buildPath),
         new FaviconsWebpackPlugin({
             // Your source logo
-            logo: './src/assets/icon.png',
+            logo: './src/assets/apress-logo.svg',
             // The prefix for all image files (might be a folder or a name)
             prefix: 'icons-[hash]/',
             // Generate a cache file with control hashes and

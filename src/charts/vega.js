@@ -1,12 +1,11 @@
-import {loader, parse, View} from 'vega';
+import {parse, View} from 'vega';
 
+import * as data from './vega.json';
 
 export const vegaBarChart = function() {
     let view;
 
-    loader()
-        .load('src/charts/vega.json')
-        .then(function(data) { render(JSON.parse(data)); });
+    render(data);
 
     function render(spec) {
         view = new View(parse(spec))
