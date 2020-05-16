@@ -26,7 +26,7 @@
         "breakpoints.js": "^1.0.0",
         "britecharts": "^2.9.8",
         "browser-js": "^1.10.1",
-        "d3": "^5.9.1",
+        "d3": "^5.16.0",
         "d3fc": "^14.0.25",
         "expose-loader": "^0.7.5",
         "gh-pages": "^2.0.1",
